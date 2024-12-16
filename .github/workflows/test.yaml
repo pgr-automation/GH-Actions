@@ -13,7 +13,11 @@ jobs:
       - name: greeting
         run: echo "Hello Prashanth GR"
       - name: checking resources
-        run: nproc 
+        run: |
+            nproc
+            ls -lrth
+            whoami
+            hostname -I 
       - name: Say Byee
         run: "echo See you again"
       
