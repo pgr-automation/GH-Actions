@@ -1,0 +1,16 @@
+name: testing
+
+on:
+  push:
+    branches: 
+      - main
+    
+jobs:
+  testing:
+    runs-on: ubuntu-20.04
+
+    steps:
+      - name: greeting
+        run: echo "Hello Prashanth GR"
+      - name: Say Byee
+        run: "echo See you again"
