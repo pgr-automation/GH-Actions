@@ -13,9 +13,7 @@ jobs:
       - name: greeting
         run: echo "Hello Prashanth GR"
       - name: checking resources
-        run: nproc && \ 
-             free -h && \
-              df-h
+        run: nproc 
       - name: Say Byee
         run: "echo See you again"
       
