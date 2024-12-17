@@ -3,7 +3,7 @@ name: NodeJs Application
 on:
   push:
     branches: 
-      - dev
+      - main
   workflow_dispatch:
     
 jobs:
@@ -25,18 +25,17 @@ jobs:
           npm install
           npm install --save-dev jest supertest
           npm install mongoose dotenv morgan helmet express-rate-limit cors compression winston
-  test:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
+
       - name: Run tests
         run: |
           cd NodeJs
           npm test
-  deploy:
-    needs: test
-    runs-on: ubuntu-latest
-    steps:
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: artifact-file
+          path: dist
+
       - name: Install pm2
         run: npm install pm2 -g
      
