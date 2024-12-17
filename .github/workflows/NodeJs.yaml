@@ -34,4 +34,6 @@ jobs:
       - name: Start App
         run: |
           pm2 start src/app.js --name "my-node-app"
+          pm2 info my-node-ap 
+          sleep 60
       

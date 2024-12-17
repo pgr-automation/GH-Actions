@@ -37,5 +37,5 @@ jobs:
      
       - name: Start App
         run: |
-          pm2 start NodeJs/src/app.js --name "my-node-app"
+          pm2 start NodeJs/src/app.js --name "my-node-app"  
       
