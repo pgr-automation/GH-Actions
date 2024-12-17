@@ -14,7 +14,7 @@ jobs:
         run: echo "Hello Prashanth GR"
  
       - name: Check out code
-        uses: actions/checkout@4
+        uses: actions/checkout@v4
 
       - name: checking resources
         run: |
