@@ -1,6 +1,5 @@
 const request = require('supertest');
 const app = require('../src/app');
-// test
 describe('GET /', () => {
   it('should return a 200 status', async () => {
     const res = await request(app).get('/');
