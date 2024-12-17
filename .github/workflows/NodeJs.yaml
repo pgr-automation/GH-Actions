@@ -25,11 +25,21 @@ jobs:
           npm install
           npm install --save-dev jest supertest
           npm install mongoose dotenv morgan helmet express-rate-limit cors compression winston
+      - name: Build
+        run: |
+          cd NodeJs/
+          npm run build
 
       - name: Run tests
         run: |
           cd NodeJs
           npm test
+
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: Artifact-file
+          path: dist
 
       - name: Install pm2
         run: npm install pm2 -g
