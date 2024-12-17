@@ -39,7 +39,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: Artifact-file
-          path: NodeJs/artifacts
+          path: NodeJs/dist
 
       - name: Install pm2
         run: npm install pm2 -g
@@ -52,5 +52,5 @@ jobs:
           pm2 list
           ls -lrth 
           pm2 -v
-          pm2 info my-node-app
+          pm2 monitor my-node-app
       
