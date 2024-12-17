@@ -20,12 +20,8 @@ jobs:
         with:
           node-version: 18
 
-      - name: checking resources
+      - name: checking node Version
         run: |
-            nproc
-            ls -lrth
-            whoami
-            hostname -I
             echo "Node Version is :" `node -v`
 
       - name: Say Byee
