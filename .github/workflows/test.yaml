@@ -1,0 +1,37 @@
+name: Node.js CI/CD with PM2
+
+on:
+  push:
+    branches: 
+      - main
+    paths: 
+      - NodeJs/**
+    
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: |
+          cd NodeJs/
+          npm install
+
+      - name: Run tests
+        run: npm test
+
+      - name: Install pm2
+        run: npm install pm2 -g
+     
+      - name: Start App
+        run: |
+          pm2 start src/app.js --name "my-node-app"
+      
