@@ -25,12 +25,18 @@ jobs:
           npm install
           npm install --save-dev jest supertest
           npm install mongoose dotenv morgan helmet express-rate-limit cors compression winston
-
+  test:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
       - name: Run tests
         run: |
           cd NodeJs
           npm test
-
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
       - name: Install pm2
         run: npm install pm2 -g
      
