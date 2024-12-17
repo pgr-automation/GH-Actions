@@ -50,6 +50,6 @@ jobs:
       - name: List the apps
         run: |
           pm2 list
-          pm2 log --lines 100
+          pm2 logs my-node-app --lines 100
           pm2 list
       
