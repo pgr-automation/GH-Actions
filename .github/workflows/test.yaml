@@ -12,12 +12,17 @@ jobs:
     steps:
       - name: greeting
         run: echo "Hello Prashanth GR"
+ 
+      - name: Check out code
+        uses: actions/checkout@4
+
       - name: checking resources
         run: |
             nproc
             ls -lrth
             whoami
-            hostname -I 
+            hostname -I
+
       - name: Say Byee
         run: "echo See you again"
       
