@@ -22,7 +22,7 @@ jobs:
         run: |
           cd NodeJs/
           npm install
-          npm install --save-dev jest supertes
+          npm install --save-dev jest supertest
           npm install express-rate-limit
           npm install mongoose
 
