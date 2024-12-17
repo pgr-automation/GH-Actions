@@ -50,7 +50,5 @@ jobs:
       - name: List the apps
         run: |
           pm2 list
-          ls -lrth 
-          pm2 -v
           pm2 monitor my-node-app
       
