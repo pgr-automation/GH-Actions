@@ -26,7 +26,7 @@ jobs:
             ls -lrth
             whoami
             hostname -I
-            echo Node Versiob is : `node -v`
+            echo "Node Version is :"" `node -v`
 
       - name: Say Byee
         run: "echo See you again"
