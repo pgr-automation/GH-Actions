@@ -23,10 +23,9 @@ jobs:
           cd NodeJs/
           npm install
           npm install --save-dev jest supertest
-          npm install express-rate-limit
-          npm install mongoose
-          npm install dotenv
-          npm install morgan
+          npm install mongoose dotenv morgan helmet express-rate-limit cors compression winston
+         
+
 
       - name: Run tests
         run: |
