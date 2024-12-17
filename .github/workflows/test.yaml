@@ -26,6 +26,7 @@ jobs:
           npm install express-rate-limit
           npm install mongoose
           npm install dotenv
+          npm install morgan
 
       - name: Run tests
         run: |
