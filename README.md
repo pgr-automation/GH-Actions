@@ -200,3 +200,12 @@ on:
 ## 33. Reusable Composite Actions
 
   - Combine steps like install, lint, and test into one action used by multiple projects.
+
+---
+# Github actions Supported Build types
+1. Matrix build
+2. Single-Environment Build
+3. Parrallel Builds
+4. Dependemcy Builds
+5. Scheduled Builds
+6. Resuable Workflow builds
